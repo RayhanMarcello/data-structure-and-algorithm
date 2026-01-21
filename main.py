@@ -1,39 +1,3 @@
-arr = [4,23,4,51,1]
-# minValArr = arr[4]
-
-# for i in arr :
-#     if i < minValArr:
-#         minValArr == i
-
-# arr.append(minValArr)
-# print("lowest", minValArr)
-# print("ga di sorting", arr)
-
-# sort
-
-# arr.sort()
-# print(arr)
-
-# function sort
-# def sort(arr_sort):
-    # for i in range(len(arr_sort))
-
-
-
-
-
-
-# sort manual
-total = 0
-
-# for i in range (3,6):
-#     print(i, "\n")
-
-# for j in range (0, 11, 2):
-#     print(j, "\n")
-
-# for k in range (5, -1, -1):
-#     print(k, "\n")
 
 arr_sort = [5,3,8,6,7,2]
 for i in range(len(arr_sort)-1,0,-1):
@@ -52,7 +16,9 @@ for i in range(len(arr_sort)-1,0,-1):
 
 
 # test sendiri
+arr = [2,23,4,51,1]
 
+# bubble sort
 for x in range(len(arr)-1, 0, -1):
     for y in range(x):
         if arr[y] > arr[y+1]:
@@ -60,4 +26,23 @@ for x in range(len(arr)-1, 0, -1):
             arr[y] = arr[y+1]
             arr[y+1] = temp
 print(arr)
+
+# selection sort
+
+arr2 = [2,6,5,1,3,4]
+for i in range(0, len(arr2)-1, 1):
+    print(i)
+    cur_min_idx = i
+    for j in range(i+1, len(arr2)):
+        if arr2[j] < arr2[cur_min_idx]:
+            cur_min_idx = j
+    
+    arr2[i], arr2[cur_min_idx] = arr2[cur_min_idx], arr2[i]
+print(arr2)
+    
+
+
+
+
+
 
